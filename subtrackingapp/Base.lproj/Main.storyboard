@@ -11,7 +11,6 @@
         <!--Navigation Controller-->
         <scene sceneID="IdW-tA-OYL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="J9E-7f-YQc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="Tul-9c-6am" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IrA-GB-Rhj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -21,6 +20,7 @@
                         <segue destination="gG2-yq-qXl" kind="relationship" relationship="rootViewController" id="NHh-0v-pNd"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J9E-7f-YQc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-609" y="-16"/>
         </scene>
@@ -66,7 +66,7 @@
                                             <constraint firstAttribute="height" constant="63" id="1tC-Wk-XvU"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Нет аккаунта?">
+                                        <buttonConfiguration key="configuration" style="plain" title="Уже есть аккаунт?">
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="23"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -98,37 +98,192 @@
             </objects>
             <point key="canvasLocation" x="269.56521739130437" y="-16.071428571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Вход-->
         <scene sceneID="dWh-OU-Lu1">
             <objects>
                 <viewController id="Vfa-gZ-CBb" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZDc-pB-xJT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="5fW-qa-gtp">
+                                <rect key="frame" x="20" y="195" width="374" height="135"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UA5-RX-GmO">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="63"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="63" id="dgg-p1-8AV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8hd-oz-q3R">
+                                        <rect key="frame" x="0.0" y="72" width="374" height="63"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="63" id="pmN-d7-QSs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="aET-Yg-sKV"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ntt-Rs-8P5">
+                                <rect key="frame" x="20" y="603" width="374" height="63"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Вперед!">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="23"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4a9-Nu-4Dm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4a9-Nu-4Dm" firstAttribute="bottom" secondItem="Ntt-Rs-8P5" secondAttribute="bottom" constant="196" id="6wa-gX-Skn"/>
+                            <constraint firstItem="4a9-Nu-4Dm" firstAttribute="bottom" secondItem="5fW-qa-gtp" secondAttribute="bottom" constant="532" id="WdE-Jf-t2M"/>
+                            <constraint firstItem="4a9-Nu-4Dm" firstAttribute="trailing" secondItem="5fW-qa-gtp" secondAttribute="trailing" constant="20" id="hFe-8V-7fy"/>
+                            <constraint firstItem="5fW-qa-gtp" firstAttribute="top" secondItem="4a9-Nu-4Dm" secondAttribute="top" constant="107" id="mpW-7a-t4c"/>
+                            <constraint firstItem="5fW-qa-gtp" firstAttribute="leading" secondItem="4a9-Nu-4Dm" secondAttribute="leading" constant="20" id="num-8P-InQ"/>
+                            <constraint firstItem="4a9-Nu-4Dm" firstAttribute="trailing" secondItem="Ntt-Rs-8P5" secondAttribute="trailing" constant="20" id="p4F-lR-AS9"/>
+                            <constraint firstItem="Ntt-Rs-8P5" firstAttribute="top" secondItem="ZDc-pB-xJT" secondAttribute="topMargin" constant="515" id="pq2-ev-SN6"/>
+                            <constraint firstItem="Ntt-Rs-8P5" firstAttribute="leading" secondItem="4a9-Nu-4Dm" secondAttribute="leading" constant="20" id="tbY-td-bHa"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="oXU-JM-cTG"/>
+                    <navigationItem key="navigationItem" title="Вход" largeTitleDisplayMode="always" id="oXU-JM-cTG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="viD-xw-n9G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1022" y="387"/>
         </scene>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="e7T-GS-cyR">
+            <objects>
+                <navigationController id="MAm-0Y-UgE" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ELh-lV-Wf9"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MPm-n6-Y0Q">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpu-cG-1Oq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1916" y="114"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="7d8-0d-H5p">
+            <objects>
+                <viewController id="PiD-UK-Nd4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K7v-8b-TFm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="B7Y-DV-n94"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="5DN-9K-6aa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eE6-bP-7uu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3612" y="409"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="1nL-aM-nZb">
+            <objects>
+                <viewController id="4ej-Db-NzH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LON-s0-fxE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="eVk-vX-7Vc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="8jQ-80-HUC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gv1-1K-MmU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3612" y="-198"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="cn4-8y-Kp0">
+            <objects>
+                <tabBarController modalPresentationStyle="fullScreen" id="8wg-IR-eE7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="TxT-wm-O6L"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Skb-ZQ-ngG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S9u-Cn-Dux" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2722" y="105"/>
+        </scene>
+        <!--Регистрация-->
         <scene sceneID="f3d-2i-3Lg">
             <objects>
                 <viewController id="Omm-ZP-OXx" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iGk-jx-uok">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2S-eK-cve">
+                                <rect key="frame" x="20" y="603" width="374" height="63"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Вперед!">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="23"/>
+                                </buttonConfiguration>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="yHC-Oe-fbd">
+                                <rect key="frame" x="20" y="191" width="374" height="207"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MwY-Zc-WIo">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="63"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="63" id="3OQ-w7-yC0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qso-Zc-Tot">
+                                        <rect key="frame" x="0.0" y="72" width="374" height="63"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="63" id="kwV-Ts-fp5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Повторите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jh7-gT-nGD">
+                                        <rect key="frame" x="0.0" y="144" width="374" height="63"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="63" id="Nfy-Hg-JYQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="Ai9-8h-9TR"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="bZr-LE-A4e"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bZr-LE-A4e" firstAttribute="trailing" secondItem="yHC-Oe-fbd" secondAttribute="trailing" constant="20" id="8hD-9g-g37"/>
+                            <constraint firstItem="bZr-LE-A4e" firstAttribute="bottom" secondItem="g2S-eK-cve" secondAttribute="bottom" constant="196" id="C8v-JA-rev"/>
+                            <constraint firstItem="yHC-Oe-fbd" firstAttribute="leading" secondItem="bZr-LE-A4e" secondAttribute="leading" constant="20" id="Jau-qE-Ql5"/>
+                            <constraint firstItem="g2S-eK-cve" firstAttribute="top" secondItem="bZr-LE-A4e" secondAttribute="top" constant="515" id="T2u-YL-Me6"/>
+                            <constraint firstItem="g2S-eK-cve" firstAttribute="leading" secondItem="bZr-LE-A4e" secondAttribute="leading" constant="20" id="ggG-fE-1ks"/>
+                            <constraint firstItem="bZr-LE-A4e" firstAttribute="trailing" secondItem="g2S-eK-cve" secondAttribute="trailing" constant="20" id="iPr-TD-89t"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="yHC-Oe-fbd" secondAttribute="bottom" constant="464" id="j0z-CP-cmR"/>
+                            <constraint firstItem="yHC-Oe-fbd" firstAttribute="top" secondItem="bZr-LE-A4e" secondAttribute="top" constant="103" id="xuU-rt-DkC"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bLc-8e-Tfr"/>
+                    <navigationItem key="navigationItem" title="Регистрация" largeTitleDisplayMode="always" id="bLc-8e-Tfr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cg3-SV-Mzh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028" y="-272"/>
+            <point key="canvasLocation" x="1027.536231884058" y="-272.54464285714283"/>
         </scene>
     </scenes>
     <resources>
